@@ -2,17 +2,17 @@
 let gulp = require("gulp"),
 	uglify = require("gulp-uglify"),
 	htmlmin = require("gulp-htmlmin"),
-	bable = require("gulp-babel"), // 解决压缩ES6 的问题
+	babel = require("gulp-babel"), // 解决压缩ES6 的问题
 	sass = require("gulp-sass"),
 	connect = require("gulp-connect"); // 解决本地服务器
 
 // 启动服务器
 gulp.task("connect", function(){
-	connect.server(
+	connect.server({
 		root : "dist", // 将dist设置为服务器根目录
 		livereload : true,
 		port : 8080 // 端口
-	); // 设置本地服务器
+	}); // 设置本地服务器
 });
 
 // 压缩html
@@ -61,7 +61,7 @@ gulp.task("sass", function(){
 // 监视文件修改
 gulp.task("watch", function(){
 	gulp.watch("src/sass/*.scss", ["sass"]);
-	gulp.watch("src/**/*.js", ["js"]);
+	gulp.watch("src/js/*.js", ["js"]);
 	gulp.watch("src/**/*.html", ["html"]);
 });
 
