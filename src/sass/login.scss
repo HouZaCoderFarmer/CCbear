@@ -1,0 +1,61 @@
+/*登录样式*/
+#login{
+    height: 600px;
+    width: 100%;
+    background: url(../images/zz.jpg);
+    .login{
+        width: 1200px;
+        height: 600px;
+        margin: 0 auto;
+        .img{
+            float: left;
+        }
+        img{
+            margin-top: 100px;
+        }
+        .login_form{
+            float: left;
+            width: 480px;
+            height: 415px;
+            border: 1px solid #ddd;
+            background: white;
+            position: relative;
+            margin: 100px 0 0 106px;
+            .login_form_box{
+                width: 380px;
+                height: 296px;
+                border-bottom: 1px solid;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                p{
+                    i{
+                        display: inline-block;
+                        width: 38px;
+                        height: 44px;
+                        border-right: 1px solid #ddd;
+                        border-left: 1px solid #ddd;
+                    }
+                    &:nth-child(1){
+                        font-size: 16px;
+                        font-weight: 700;
+                        margin-bottom: 20px;
+                    }
+                    &:nth-child(2){
+                        width: 380px;
+                        height: 44px;
+                        border-top: 1px solid #ddd;
+                        border-right: 1px solid #ddd;
+                        border-bottom: 1px solid #ddd;
+                        i{
+                            background: url(../images/user.png) no-repeat center center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

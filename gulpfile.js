@@ -1,4 +1,4 @@
-/* gulp任务配置 */
+	/* gulp任务配置 */
 let gulp = require("gulp"),
 	uglify = require("gulp-uglify"),
 	htmlmin = require("gulp-htmlmin"),
@@ -61,7 +61,7 @@ gulp.task("sass", function(){
 // 监视文件修改
 gulp.task("watch", function(){
 	gulp.watch("src/sass/*.scss", ["sass"]);
-	gulp.watch("src/js/*.js", ["js"]);
+	gulp.watch("src/**/*.js", ["js"]);
 	gulp.watch("src/**/*.html", ["html"]);
 });
 
